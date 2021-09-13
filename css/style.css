@@ -2,6 +2,30 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+.shop{
+  color: orange;
+}
+.bg-color{
+  background-color: rgb(253, 242, 238);
+}
+.bg{
+  background-color: whitesmoke;
+}
+.btn-color{
+  color: white;
+  background-color: orange;
+}
+.btn-color2{
+  color: white;
+  background-color:black;
+}
+.btn-color2:hover{
+  color: white;
+}
+.btn-color:hover{
+  color: white;
+  background-color:  peru;
+}
 .cart {
   width: 350px;
   padding: 10px;

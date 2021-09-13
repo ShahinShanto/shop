@@ -11,45 +11,26 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("col-lg-4");
-    div.innerHTML = `<div class="single-product card h-100 bg-info ">
-      <div class="text-center">
-    <img class="product-image img-fluid mt-3" style="width:9rem; height:10rem" src=${image}></img>
-      </div>
-      <div class="card-body">
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <p>Rating: ${product.rating.rate}</p>
-      <p>Raters: ${product.rating.count}</p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button>
-      </div>
-      </div>
+    div.innerHTML = `
+    
+      <div class=" single-product card h-100 text-center border border-2 shadow p-3 mb-5 rounded bg-color">
+              <div class="text-center">
+                <img class="product-image img-fluid mt-3" style="width:9rem; height:10rem" src=${image}></img>
+             </div>
+             <div class="card-body">
+                <h3>${product.title}</h3>
+                 <p class="fw-bold text-secondary">Category: ${product.category}</p>
+                 <h3>Price: $ ${product.price}</h3>
+                 <p class="fw-bold text-secondary">Average Rating: ${product.rating.rate}</p>
+                 <p class="fw-bold text-secondary">Raters: ${product.rating.count}</p>
+                  <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn-color buy-now btn ">Add to Cart</button>
+                  <button id="details-btn" class="btn-color2 btn">Details</button>
+             </div>
+       </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
-// const showProducts = (products) => {
-//   const allProducts = products.map((pd) => pd);
-//   for (const product of allProducts) {
-//     const image = product.image;
-//     const div = document.createElement("div");
-//     div.classList.add("product");
-//     div.innerHTML = `<div class="single-product">
-//       <div>
-//     <img class="product-image" src=${image}></img>
-//       </div>
-//       <h3>${product.title}</h3>
-//       <p>Category: ${product.category}</p>
-//       <h2>Price: $ ${product.price}</h2>
-//       <p>Rating: ${product.rating.rate}</p>
-//       <p>Raters: ${product.rating.count}</p>
-//       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-//       <button id="details-btn" class="btn btn-danger">Details</button></div>
-//       `;
-//     document.getElementById("all-products").appendChild(div);
-//   }
-// };
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
